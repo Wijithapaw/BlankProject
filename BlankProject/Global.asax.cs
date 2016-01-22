@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Web.Security;
+using WebMatrix.WebData;
 
 namespace BlankProject
 {
@@ -12,6 +14,14 @@ namespace BlankProject
     {
         protected void Application_Start()
         {
+            /*
+            if (!WebSecurity.Initialized)
+                WebSecurity.InitializeDatabaseConnection("DefaultConnection", "Users", "ID", "Username", true);
+
+            if (!Roles.RoleExists("Administrator"))
+                Roles.CreateRole("Administrator");
+                */
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
