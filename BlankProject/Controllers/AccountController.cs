@@ -189,7 +189,7 @@ namespace BlankProject.Controllers
             if (ModelState.IsValid)
             {
                 Admin admin = new Admin() { FirstName = model.FirstName, LastName = model.LastName, Email = model.Email, UserName = model.Email };
-                var result = await UserManager.CreateAsync(admin, "This should be a very long password which is hard to guess");
+                var result = await UserManager.CreateAsync(admin, "Admin123 (This should be a very long password which is hard to guess)");
 
                 if(result.Succeeded)
                 {
