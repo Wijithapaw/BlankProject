@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BlankProject.Models;
+using BlankProject.Data;
+using BlankProject.Domain.Entities;
 
 namespace BlankProject.Controllers
 {
@@ -151,7 +153,7 @@ namespace BlankProject.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new User { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -169,6 +171,40 @@ namespace BlankProject.Controllers
             }
 
             // If we got this far, something failed, redisplay form
+            return View(model);
+        }
+
+        [AllowAnonymous]
+        // GET: AdminArea/Admin/Create
+        public ActionResult CreateAdmin()
+        {
+            return View();
+        }
+
+        // POST: AdminArea/Admin/Create
+        [AllowAnonymous]
+        [HttpPost]
+        public async Task<ActionResult> CreateAdmin(AdminViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                Admin admin = new Admin() { FirstName = model.FirstName, LastName = model.LastName, Email = model.Email, UserName = model.Email };
+                var result = await UserManager.CreateAsync(admin, "This should be a very long password which is hard to guess");
+
+                if(result.Succeeded)
+                {
+                    UserManager.AddToRole(admin.Id, "Administrator");
+
+                    string token = await UserManager.GeneratePasswordResetTokenAsync(admin.Id);
+                    var callbackUrl = Url.Action("ResetPassword", "Account", new { code = token }, protocol: Request.Url.Scheme);
+                    await UserManager.SendEmailAsync(admin.Id, "New Account", "New Blank-Project account has been created for you. please visit following link to reset your password. <br /> <a href=\"" + callbackUrl + "\">here</a>");
+
+                    return RedirectToAction("Index", "Admin", new { area = "AdminArea" });
+                }
+
+                AddErrors(result);                
+            }
+
             return View(model);
         }
 
@@ -367,7 +403,7 @@ namespace BlankProject.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new User { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {

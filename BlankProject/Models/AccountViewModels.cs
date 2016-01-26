@@ -65,23 +65,10 @@ namespace BlankProject.Models
     public class RegisterViewModel
     {
         [Required]
-        [Display(Name = "First Name")]
-        public string FirstName { get; set; }
-
-        [Required]
-        [Display(Name = "Last Name")]
-        public string LastName { get; set; }
-
-        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
-        
-        [Required]
-        [Display(Name = "Username")]
-        [StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.",MinimumLength = 6)]
-        public string Username { get; set; }
-        
+
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
@@ -121,5 +108,22 @@ namespace BlankProject.Models
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
+    }
+
+    public class UserViewModel
+    {
+        [Required, MaxLength(50, ErrorMessage = "First Name cannot exceed 50 chanractors")]
+        public string FirstName { get; set; }
+
+        [Required, MaxLength(50, ErrorMessage = "Length cannot exceed 50 chanractors")]
+        public string LastName { get; set; }
+
+        [Required, MaxLength(200, ErrorMessage = "Email cannot exceed 200 chanractors")]
+        public string Email { get; set; }
+    }
+
+    public class AdminViewModel : UserViewModel
+    {
+
     }
 }

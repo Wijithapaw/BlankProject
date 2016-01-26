@@ -11,8 +11,9 @@ namespace BlankProject.Services
 {
     public class AdminService : ServiceBase, IAdminService
     {
+        
         public AdminService(IDataContext context) : base(context) { }
-
+        
         public Admin Create(Admin admin)
         {
             Context.Admins.Add(admin);

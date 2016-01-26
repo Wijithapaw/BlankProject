@@ -10,9 +10,9 @@ namespace BlankProject.Domain
 {
     public interface IDataContext
     {
-        DbSet<User> Users { get; set; }
+        IDbSet<User> Users { get; set; }
 
-        DbSet<Admin> Admins { get; set; }
+        IDbSet<Admin> Admins { get; set; }
 
         int SaveChanges();
     }

@@ -2,21 +2,21 @@
 
 namespace BlankProject.Areas.AdminArea
 {
-    public class AdminAreaRegistration : AreaRegistration 
+    public class AdminAreaAreaRegistration : AreaRegistration 
     {
         public override string AreaName 
         {
             get 
             {
-                return "Admin";
+                return "AdminArea";
             }
         }
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
-                "Admin_default",
-                "Admin/{controller}/{action}/{id}",
+                "AdminArea_default",
+                "AdminArea/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
         }

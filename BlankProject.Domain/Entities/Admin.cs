@@ -8,6 +8,6 @@ namespace BlankProject.Domain.Entities
 {
     public class Admin : User
     {
-        //Include any additional properties of a admin user
+        //TODO Add any admin specific properties to this class
     }
 }
