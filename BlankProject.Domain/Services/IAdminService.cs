@@ -11,10 +11,10 @@ namespace BlankProject.Domain.Services
     {
         IEnumerable<Admin> GetAll();
 
-        Admin Get(int id);
+        Admin Get(string id);
 
         Admin Create(Admin admin);
 
-        Admin Update(Admin admin);
+        void Update(Admin admin);
     }
 }

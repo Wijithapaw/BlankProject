@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BlankProject.Domain.Entities;
 using BlankProject.Domain;
+using System.Runtime.Remoting.Contexts;
 
 namespace BlankProject.Services
 {
@@ -22,7 +23,7 @@ namespace BlankProject.Services
             return admin;
         }
 
-        public Admin Get(int id)
+        public Admin Get(string id)
         {
             return Context.Admins.Find(id);
         }
@@ -32,9 +33,15 @@ namespace BlankProject.Services
             return Context.Admins;
         }
 
-        public Admin Update(Admin admin)
+        public void Update(Admin model)
         {
-            throw new NotImplementedException();
+            var admin = Get(model.Id);
+
+            admin.FirstName = model.FirstName;
+            admin.LastName = model.LastName;
+            admin.Email = model.Email;
+
+            Context.SaveChanges();
         }
     }
 }

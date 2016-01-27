@@ -13,6 +13,32 @@ namespace BlankProject.Domain.Entities
     // You can add profile data for the user by adding more properties to your User class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class User : IdentityUser
     {
+        public override string Id
+        {
+            get
+            {
+                return base.Id;
+            }
+
+            set
+            {
+                base.Id = value;
+            }
+        }
+
+        public override string Email
+        {
+            get
+            {
+                return base.Email;
+            }
+
+            set
+            {
+                base.Email = value;
+            }
+        }
+
         [Required, Display(Name = "First Name")]
         public string FirstName { get; set; }
 
