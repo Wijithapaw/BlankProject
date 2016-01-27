@@ -5,6 +5,10 @@ using BlankProject.Domain.Services;
 using BlankProject.Services;
 using BlankProject.Domain;
 using BlankProject.Data;
+using Microsoft.AspNet.Identity.EntityFramework;
+using BlankProject.Domain.Entities;
+using BlankProject.Controllers;
+using Microsoft.AspNet.Identity;
 
 namespace BlankProject.App_Start
 {
@@ -41,9 +45,12 @@ namespace BlankProject.App_Start
 
             // TODO: Register your types here
             // container.RegisterType<IProductRepository, ProductRepository>();
-            container.RegisterType<IDataContext, DataContext>();
+            container.RegisterType<IDataContext, DataContext>(new HierarchicalLifetimeManager());
 
-            container.RegisterType<IAdminService, AdminService>();            
+            container.RegisterType<IAdminService, AdminService>();
+
+            container.RegisterType<AccountController>(new InjectionConstructor());
+            
         }
     }
 }
