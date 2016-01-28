@@ -13,7 +13,7 @@ using System.Web.Mvc;
 
 namespace BlankProject.Areas.AdminArea.Controllers
 {
-    public class AdminController : Controller
+    public class AdminController : _BaseController
     {
         private readonly IAdminService AdminService;
 

@@ -50,7 +50,7 @@ namespace BlankProject.App_Start
             container.RegisterType<IAdminService, AdminService>();
 
             container.RegisterType<AccountController>(new InjectionConstructor());
-            
+            container.RegisterType<ManageController>(new InjectionConstructor());
         }
     }
 }
