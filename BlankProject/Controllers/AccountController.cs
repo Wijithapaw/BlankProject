@@ -11,6 +11,7 @@ using Microsoft.Owin.Security;
 using BlankProject.Models;
 using BlankProject.Data;
 using BlankProject.Domain.Entities;
+using BlankProject.Utills;
 
 namespace BlankProject.Controllers
 {
@@ -198,6 +199,13 @@ namespace BlankProject.Controllers
                     string token = await UserManager.GeneratePasswordResetTokenAsync(admin.Id);
                     var callbackUrl = Url.Action("ResetPassword", "Account", new { code = token }, protocol: Request.Url.Scheme);
                     await UserManager.SendEmailAsync(admin.Id, "New Account", "New Blank-Project account has been created for you. please visit following link to reset your password. <br /> <a href=\"" + callbackUrl + "\">here</a>");
+
+                    TempData["Message"] = new Message()
+                    {
+                        Type = MessageType.Success,
+                        Title = "Success",
+                        Text = "User created sucessfully"
+                    };
 
                     return RedirectToAction("Index", "Admin", new { area = "AdminArea" });
                 }
