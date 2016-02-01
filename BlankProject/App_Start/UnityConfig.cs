@@ -45,7 +45,7 @@ namespace BlankProject.App_Start
 
             // TODO: Register your types here
             // container.RegisterType<IProductRepository, ProductRepository>();
-            container.RegisterType<IDataContext, DataContext>(new HierarchicalLifetimeManager());
+            container.RegisterType<IDataContext, DataContext>(new PerRequestLifetimeManager());
 
             container.RegisterType<IAdminService, AdminService>();
 

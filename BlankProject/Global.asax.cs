@@ -29,9 +29,6 @@ namespace BlankProject
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
-            UnityWebActivator.Start();
-
         }
     }
 }

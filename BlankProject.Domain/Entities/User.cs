@@ -45,7 +45,7 @@ namespace BlankProject.Domain.Entities
 
         [Required, Display(Name = "Last Name")]
         public string LastName { get; set; }
-               
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

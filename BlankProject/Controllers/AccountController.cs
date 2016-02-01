@@ -175,15 +175,13 @@ namespace BlankProject.Controllers
             return View(model);
         }
 
-        [AllowAnonymous]
-        // GET: AdminArea/Admin/Create
+        [Authorize(Roles = "Administrator")]
         public ActionResult CreateAdmin()
         {
             return View();
         }
 
-        // POST: AdminArea/Admin/Create
-        [AllowAnonymous]
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public async Task<ActionResult> CreateAdmin(AdminViewModel model)
         {
@@ -211,6 +209,46 @@ namespace BlankProject.Controllers
                 }
 
                 AddErrors(result);                
+            }
+
+            return View(model);
+        }
+
+        [Authorize(Roles = "Administrator")]
+        public ActionResult EditAdmin(string Id)
+        {
+            var admin = UserManager.FindById(Id);
+
+            return View(admin);
+        }
+
+        [Authorize(Roles = "Administrator")]
+        [HttpPost]
+        public ActionResult EditAdmin(Admin model)
+        {
+            if (ModelState.IsValid)
+            {
+                var admin = UserManager.FindById(model.Id);
+                admin.FirstName = model.FirstName;
+                admin.LastName = model.LastName;
+                admin.Email = model.Email;
+                admin.UserName = admin.Email;
+
+                var result =  UserManager.Update(admin);
+
+                if (result.Succeeded)
+                {
+                    TempData["Message"] = new Message()
+                    {
+                        Type = MessageType.Success,
+                        Title = "Success",
+                        Text = "User updated sucessfully"
+                    };
+
+                    return RedirectToAction("Index", "Admin", new { area = "AdminArea" });
+                }
+
+                AddErrors(result);
             }
 
             return View(model);
