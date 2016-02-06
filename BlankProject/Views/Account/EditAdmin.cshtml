@@ -48,7 +48,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", "Admin", routeValues: new { area = "AdminArea" }, htmlAttributes: null)
 </div>
 
 @section Scripts {

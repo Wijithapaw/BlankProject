@@ -112,13 +112,13 @@ namespace BlankProject.Models
 
     public class UserViewModel
     {
-        [Required, MaxLength(50, ErrorMessage = "First Name cannot exceed 50 chanractors")]
+        [Required, MaxLength(50, ErrorMessage = "First Name cannot exceed 50 chanractors"), Display(Name ="First Name")]
         public string FirstName { get; set; }
 
-        [Required, MaxLength(50, ErrorMessage = "Length cannot exceed 50 chanractors")]
+        [Required, MaxLength(50, ErrorMessage = "Length cannot exceed 50 chanractors"), Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        [Required, MaxLength(200, ErrorMessage = "Email cannot exceed 200 chanractors")]
+        [Required, MaxLength(200, ErrorMessage = "Email cannot exceed 200 chanractors"), DataType(DataType.EmailAddress)]
         public string Email { get; set; }
     }
 

@@ -1,5 +1,8 @@
 namespace BlankProject.Data.Migrations
 {
+    using Domain.Entities;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -14,18 +17,24 @@ namespace BlankProject.Data.Migrations
 
         protected override void Seed(BlankProject.Data.DataContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            //If Roles does not exists create roles
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+            if (!roleManager.RoleExists("Administrator"))
+                roleManager.Create(new IdentityRole("Administrator"));
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            // If users does not exist (Very Initial Run), create the super admin user to start with. Reconfigure
+            // this account with valid data once login
+            if (!context.Users.Any())
+            {
+                Admin admin = new Admin() { FirstName = "Super", LastName = "Admin", Email = "superadmin@yopmail.com", UserName = "superadmin@yopmail.com" };
+                var userManager = new UserManager<User>(new UserStore<User>(context));
+                var result = userManager.Create(admin, "admin123");
+
+                if (result.Succeeded)
+                {                
+                    userManager.AddToRole(admin.Id, "Administrator");
+                }
+            }
         }
     }
 }

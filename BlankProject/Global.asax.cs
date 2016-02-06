@@ -19,12 +19,6 @@ namespace BlankProject
         {
             DataContext.Initialize();
 
-            DataContext context = new DataContext();
-            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
-
-            if (!roleManager.RoleExists("Administrator"))
-                roleManager.Create(new IdentityRole("Administrator"));
-
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

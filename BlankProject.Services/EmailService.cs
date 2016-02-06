@@ -28,8 +28,8 @@ namespace BlankProject.Services
 
         public void Send(MailMessage email)
         {
-            email.From = new MailAddress("noreply@blank-project.com", "The Vivacity Team");
-            email.Sender = new MailAddress("noreply@blank-project.com", "The Vivacity Team");
+            email.From = new MailAddress("noreply@blank-project.com", "Blank Project Team");
+            email.Sender = new MailAddress("noreply@blank-project.com", "Blank Project Team");
 
             email.Bcc.Add("blank-project@yopmail.com");
 
