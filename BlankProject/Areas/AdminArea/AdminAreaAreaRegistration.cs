@@ -16,8 +16,8 @@ namespace BlankProject.Areas.AdminArea
         {
             context.MapRoute(
                 "AdminArea_default",
-                "AdminArea/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                "admin/{controller}/{action}/{id}",
+                new { controller="Admin", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

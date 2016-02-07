@@ -21,10 +21,9 @@ namespace BlankProject.Areas.AdminArea.Controllers
         {
             this.AdminService = adminService;
         }
-
+        
         public ActionResult Index()
         {
-
             var admins = AdminService.GetAll();
             return View(admins);
         }

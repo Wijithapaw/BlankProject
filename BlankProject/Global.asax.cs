@@ -24,5 +24,19 @@ namespace BlankProject
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        public override string GetVaryByCustomString(HttpContext context, string custom)
+        {
+            if (custom == "IsAuth")
+            {
+                if (context.Request.IsAuthenticated)
+                {
+                    return context.User.Identity.Name;
+                }
+                return null;
+            }
+
+            return base.GetVaryByCustomString(context, custom);
+        }
     }
 }

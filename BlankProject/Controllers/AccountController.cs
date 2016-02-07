@@ -12,6 +12,7 @@ using BlankProject.Models;
 using BlankProject.Data;
 using BlankProject.Domain.Entities;
 using BlankProject.Utills;
+using MvcSiteMapProvider;
 
 namespace BlankProject.Controllers
 {
@@ -175,15 +176,17 @@ namespace BlankProject.Controllers
             return View(model);
         }
 
+        [Route("account/create/admin")]
         [Authorize(Roles = "Administrator")]
-        public ActionResult CreateAdmin()
+        public ActionResult NewAdmin()
         {
             return View();
         }
 
+        [Route("account/create/admin")]
         [Authorize(Roles = "Administrator")]
         [HttpPost]
-        public async Task<ActionResult> CreateAdmin(AdminViewModel model)
+        public async Task<ActionResult> NewAdmin(AdminViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -214,14 +217,17 @@ namespace BlankProject.Controllers
             return View(model);
         }
 
+
+        [Route("account/edit/admin/{id}")]
         [Authorize(Roles = "Administrator")]
-        public ActionResult EditAdmin(string Id)
+        public ActionResult EditAdmin(string id)
         {
-            var admin = UserManager.FindById(Id);
+            var admin = UserManager.FindById(id);
 
             return View(admin);
         }
 
+        [Route("account/edit/admin/{id}")]
         [Authorize(Roles = "Administrator")]
         [HttpPost]
         public ActionResult EditAdmin(Admin model)
