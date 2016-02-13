@@ -9,9 +9,9 @@
             @Html.ActionLink("Blank Project", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
         </div>
         <div class="navbar-collapse collapse">
-            @Html.MvcSiteMap().Menu()
+            @Html.MvcSiteMap().Menu("BootstrapMenuHelperModel")
             @Html.Partial("_LoginPartial")
-        </div>
+         </div> 
     </div>
 </div>
 

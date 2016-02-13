@@ -11,11 +11,11 @@
 <body>
 
     <div class="container body-content">
-        @Html.Partial("_NavigationPartial") 
-        
+        @Html.Partial("_NavigationPartial")
+
         @if (User.Identity.IsAuthenticated)
         {
-            @Html.MvcSiteMap().SiteMapPath();
+            @Html.MvcSiteMap().SiteMapPath()
         }
 
         @Html.Partial("_MessagePartial")

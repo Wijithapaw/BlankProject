@@ -25,7 +25,8 @@ namespace BlankProject
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/font-awesome.min.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquerydatatables").Include(
                 "~/Scripts/datatables.min.js",
@@ -33,6 +34,9 @@ namespace BlankProject
 
             bundles.Add(new StyleBundle("~/Content/jquerydatatables").Include(
                 "~/Content/datatables.min.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/areyousure").Include(
+                "~/Scripts/jquery.are.you.sure.js"));
         }
     }
 }
