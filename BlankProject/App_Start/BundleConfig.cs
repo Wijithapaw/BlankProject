@@ -26,6 +26,13 @@ namespace BlankProject
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jquerydatatables").Include(
+                "~/Scripts/datatables.min.js",
+                "~/Scripts/datatables.customize.js"));
+
+            bundles.Add(new StyleBundle("~/Content/jquerydatatables").Include(
+                "~/Content/datatables.min.css"));
         }
     }
 }

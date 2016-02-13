@@ -8,7 +8,9 @@
     <mvcSiteMapNode title="Contact" controller="Home" action="Contact"/>
     <mvcSiteMapNode title="Admin" controller="Admin" action="Index" area="AdminArea" key="admin">
       <mvcSiteMapNode title="New Admin" area="" action="NewAdmin" controller="Account" visibility="SiteMapPathHelper,!*" />
-      <mvcSiteMapNode title="Edit Admin" area="" action="EditAdmin" controller="Account" preservedRouteParameters="id" visibility="SiteMapPathHelper,!*" />
+      <mvcSiteMapNode title="Edit Admin" area="" action="EditAdmin"  controller="Account" preservedRouteParameters="id"  visibility="SiteMapPathHelper,!*" >
+        <mvcSiteMapNode title="More Details" area="AdminArea" action="MoreDetails" controller="Admin" key="Admin_MoreDetails" preservedRouteParameters="adminId" visibility="SiteMapPathHelper,!*" />    
+      </mvcSiteMapNode>
     </mvcSiteMapNode>
     <mvcSiteMapNode title="Manage Account" controller="Manage" action="Index" visibility="SiteMapPathHelper,!*">
       <mvcSiteMapNode title="Change Password" action="ChangePassword" />

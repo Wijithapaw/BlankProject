@@ -225,11 +225,14 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utills\SiteMapHelper.cs" />
     <Compile Include="Utills\Utills.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\datatables.css" />
+    <Content Include="Content\datatables.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -240,10 +243,14 @@
     <Content Include="Areas\AdminArea\Views\_ViewStart.cshtml" />
     <Content Include="Areas\AdminArea\Views\Admin\Index.cshtml" />
     <Content Include="Mvc.sitemap" />
+    <Content Include="Areas\AdminArea\Views\Admin\MoreDetails.cshtml" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\datatables.js" />
+    <Content Include="Scripts\datatables.min.js" />
+    <Content Include="Scripts\datatables.customize.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -309,6 +316,7 @@
     <Folder Include="Areas\AdminArea\Views\Default\" />
     <Folder Include="Areas\AdminArea\Views\Shared\" />
     <Folder Include="Areas\AdminArea\Views\_Base\" />
+    <Folder Include="obj\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
