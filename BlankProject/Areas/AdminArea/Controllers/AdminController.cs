@@ -31,7 +31,7 @@ namespace BlankProject.Areas.AdminArea.Controllers
             return View(admins);
         }
 
-        /* Test method test site map nodes with url parameters
+        /* Test method: site map nodes with url parameters
         [SiteMapTitle("FirstName", Target = AttributeTarget.ParentNode)]
         public ActionResult MoreDetails(string adminId)
         {

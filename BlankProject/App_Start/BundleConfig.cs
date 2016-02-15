@@ -37,6 +37,9 @@ namespace BlankProject
 
             bundles.Add(new ScriptBundle("~/bundles/areyousure").Include(
                 "~/Scripts/jquery.are.you.sure.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/bootbox").Include(
+               "~/Scripts/bootbox.min.js" ));
         }
     }
 }
