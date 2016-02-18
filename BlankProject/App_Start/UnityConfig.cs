@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using BlankProject.Domain.Entities;
 using BlankProject.Controllers;
 using Microsoft.AspNet.Identity;
+using BlankProject.Domain.Common;
+using BlankProject.Common;
 
 namespace BlankProject.App_Start
 {
@@ -45,6 +47,8 @@ namespace BlankProject.App_Start
 
             // TODO: Register your types here
             // container.RegisterType<IProductRepository, ProductRepository>();
+
+            container.RegisterType<IEnvironmentDescriptor, WebEnvironmentDescriptor>(new PerRequestLifetimeManager());
             container.RegisterType<IDataContext, DataContext>(new PerRequestLifetimeManager());
 
             container.RegisterType<IAdminService, AdminService>();

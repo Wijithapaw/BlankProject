@@ -66,6 +66,10 @@
     <Compile Include="Migrations\201601260552002_AddedAdminEntity.Designer.cs">
       <DependentUpon>201601260552002_AddedAdminEntity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602181413316_AddedBaseEntityToTrachAuditData.cs" />
+    <Compile Include="Migrations\201602181413316_AddedBaseEntityToTrachAuditData.Designer.cs">
+      <DependentUpon>201602181413316_AddedBaseEntityToTrachAuditData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -87,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601260552002_AddedAdminEntity.resx">
       <DependentUpon>201601260552002_AddedAdminEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602181413316_AddedBaseEntityToTrachAuditData.resx">
+      <DependentUpon>201602181413316_AddedBaseEntityToTrachAuditData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -213,6 +213,7 @@
     <Compile Include="Areas\AdminArea\Controllers\AdminController.cs" />
     <Compile Include="Areas\AdminArea\Controllers\_BaseController.cs" />
     <Compile Include="Areas\AdminArea\Models\AdminViewModels.cs" />
+    <Compile Include="Common\WebEnvironmentDescriptor.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />

@@ -190,7 +190,18 @@ namespace BlankProject.Controllers
         {
             if (ModelState.IsValid)
             {
-                Admin admin = new Admin() { FirstName = model.FirstName, LastName = model.LastName, Email = model.Email, UserName = model.Email };
+                Admin admin = new Admin()
+                {
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    Email = model.Email,
+                    UserName = model.Email,
+                    CreatedBy = User.Identity.GetUserId(),
+                    CreatedDateUtc = DateTime.UtcNow,
+                    LastUpdatedBy = User.Identity.GetUserId(),
+                    LastUpdatedDateUtc = DateTime.UtcNow
+                };
+
                 var result = await UserManager.CreateAsync(admin, "Admin123 (This should be a very long password which is hard to guess)");
 
                 if(result.Succeeded)
@@ -239,6 +250,8 @@ namespace BlankProject.Controllers
                 admin.LastName = model.LastName;
                 admin.Email = model.Email;
                 admin.UserName = admin.Email;
+                admin.LastUpdatedBy = User.Identity.GetUserId();
+                admin.LastUpdatedDateUtc = DateTime.UtcNow;
 
                 var result =  UserManager.Update(admin);
 
