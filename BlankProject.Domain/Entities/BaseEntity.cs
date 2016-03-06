@@ -1,11 +1,11 @@
-﻿using BlankProject.Domain.Common;
+﻿using $ext_safeprojectname$.Domain.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlankProject.Domain.Entities
+namespace $ext_safeprojectname$.Domain.Entities
 {
     public class BaseEntity : IBaseEntity
     {

@@ -1,6 +1,6 @@
-﻿using BlankProject.App_Start;
-using BlankProject.Data;
-using BlankProject.Domain;
+﻿using $ext_safeprojectname$.App_Start;
+using $ext_safeprojectname$.Data;
+using $ext_safeprojectname$.Domain;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
@@ -11,7 +11,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace BlankProject
+namespace $ext_safeprojectname$
 {
     public class MvcApplication : System.Web.HttpApplication
     {

@@ -1,10 +1,10 @@
-﻿using BlankProject.Areas.AdminArea.Models;
-using BlankProject.Data;
-using BlankProject.Domain;
-using BlankProject.Domain.Entities;
-using BlankProject.Domain.Services;
-using BlankProject.Services;
-using BlankProject.Utills;
+﻿using $ext_safeprojectname$.Areas.AdminArea.Models;
+using $ext_safeprojectname$.Data;
+using $ext_safeprojectname$.Domain;
+using $ext_safeprojectname$.Domain.Entities;
+using $ext_safeprojectname$.Domain.Services;
+using $ext_safeprojectname$.Services;
+using $ext_safeprojectname$.Utills;
 using Microsoft.AspNet.Identity.Owin;
 using MvcSiteMapProvider;
 using MvcSiteMapProvider.Web.Mvc.Filters;
@@ -14,7 +14,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace BlankProject.Areas.AdminArea.Controllers
+namespace $ext_safeprojectname$.Areas.AdminArea.Controllers
 {
     public class AdminController : _BaseController
     {

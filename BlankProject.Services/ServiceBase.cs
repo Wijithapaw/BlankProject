@@ -1,11 +1,11 @@
-﻿using BlankProject.Domain;
+﻿using $ext_safeprojectname$.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlankProject.Services
+namespace $ext_safeprojectname$.Services
 {
     public abstract class ServiceBase
     {

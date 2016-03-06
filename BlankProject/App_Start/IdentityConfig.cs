@@ -10,18 +10,18 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using BlankProject.Models;
-using BlankProject.Data;
-using BlankProject.Domain.Entities;
-using BlankProject.Domain.Services;
+using $ext_safeprojectname$.Models;
+using $ext_safeprojectname$.Data;
+using $ext_safeprojectname$.Domain.Entities;
+using $ext_safeprojectname$.Domain.Services;
 
-namespace BlankProject
+namespace $ext_safeprojectname$
 {
     public class EmailService : IIdentityMessageService
     {
         public Task SendAsync(IdentityMessage message)
         {
-            IEmailService emailService = new BlankProject.Services.EmailService();
+            IEmailService emailService = new $ext_safeprojectname$.Services.EmailService();
 
             emailService.Send(message.Destination, message.Subject, message.Body);
             

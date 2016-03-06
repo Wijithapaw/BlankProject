@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace BlankProject.Areas.AdminArea.Models
+namespace $ext_safeprojectname$.Areas.AdminArea.Models
 {
 
 }

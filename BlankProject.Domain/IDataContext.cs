@@ -1,4 +1,4 @@
-﻿using BlankProject.Domain.Entities;
+﻿using $ext_safeprojectname$.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlankProject.Domain
+namespace $ext_safeprojectname$.Domain
 {
     public interface IDataContext
     {

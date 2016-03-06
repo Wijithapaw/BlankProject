@@ -6,9 +6,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using BlankProject.Models;
+using $ext_safeprojectname$.Models;
 
-namespace BlankProject.Controllers
+namespace $ext_safeprojectname$.Controllers
 {
     [Authorize]
     public class ManageController : Controller

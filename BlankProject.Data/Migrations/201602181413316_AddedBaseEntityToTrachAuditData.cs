@@ -1,4 +1,4 @@
-namespace BlankProject.Data.Migrations
+namespace $ext_safeprojectname$.Data.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

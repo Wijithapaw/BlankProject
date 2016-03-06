@@ -1,5 +1,5 @@
-﻿using BlankProject.Domain;
-using BlankProject.Domain.Entities;
+﻿using $ext_safeprojectname$.Domain;
+using $ext_safeprojectname$.Domain.Entities;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlankProject.Test.Mocks
+namespace $ext_safeprojectname$.Test.Mocks
 {
     public class MockDataContext : IDataContext
     {

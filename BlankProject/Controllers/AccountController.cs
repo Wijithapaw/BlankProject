@@ -8,13 +8,13 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using BlankProject.Models;
-using BlankProject.Data;
-using BlankProject.Domain.Entities;
-using BlankProject.Utills;
+using $ext_safeprojectname$.Models;
+using $ext_safeprojectname$.Data;
+using $ext_safeprojectname$.Domain.Entities;
+using $ext_safeprojectname$.Utills;
 using MvcSiteMapProvider;
 
-namespace BlankProject.Controllers
+namespace $ext_safeprojectname$.Controllers
 {
     [Authorize]
     public class AccountController : Controller

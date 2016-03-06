@@ -1,14 +1,14 @@
-﻿using BlankProject.Domain.Services;
+﻿using $ext_safeprojectname$.Domain.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BlankProject.Domain.Entities;
-using BlankProject.Domain;
+using $ext_safeprojectname$.Domain.Entities;
+using $ext_safeprojectname$.Domain;
 using System.Runtime.Remoting.Contexts;
 
-namespace BlankProject.Services
+namespace $ext_safeprojectname$.Services
 {
     public class AdminService : ServiceBase, IAdminService
     {

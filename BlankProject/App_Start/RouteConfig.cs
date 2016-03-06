@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace BlankProject
+namespace $ext_safeprojectname$
 {
     public class RouteConfig
     {

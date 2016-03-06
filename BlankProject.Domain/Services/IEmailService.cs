@@ -5,7 +5,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlankProject.Domain.Services
+namespace $ext_safeprojectname$.Domain.Services
 {
     public interface IEmailService
     {

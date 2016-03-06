@@ -1,5 +1,5 @@
-﻿using BlankProject.Domain;
-using BlankProject.Domain.Services;
+﻿using $ext_safeprojectname$.Domain;
+using $ext_safeprojectname$.Domain.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlankProject.Services
+namespace $ext_safeprojectname$.Services
 {
     public class EmailService: IEmailService
     {  

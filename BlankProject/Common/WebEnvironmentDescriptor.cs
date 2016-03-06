@@ -1,12 +1,12 @@
-﻿using BlankProject.Domain.Common;
-using BlankProject.Domain.Entities;
+﻿using $ext_safeprojectname$.Domain.Common;
+using $ext_safeprojectname$.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Microsoft.AspNet.Identity;
 
-namespace BlankProject.Common
+namespace $ext_safeprojectname$.Common
 {
     public class WebEnvironmentDescriptor : IEnvironmentDescriptor
     {

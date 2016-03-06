@@ -5,11 +5,11 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using BlankProject.Models;
-using BlankProject.Data;
-using BlankProject.Domain.Entities;
+using $ext_safeprojectname$.Models;
+using $ext_safeprojectname$.Data;
+using $ext_safeprojectname$.Domain.Entities;
 
-namespace BlankProject
+namespace $ext_safeprojectname$
 {
     public partial class Startup
     {

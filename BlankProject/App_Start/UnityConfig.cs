@@ -1,18 +1,18 @@
 using System;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
-using BlankProject.Domain.Services;
-using BlankProject.Services;
-using BlankProject.Domain;
-using BlankProject.Data;
+using $ext_safeprojectname$.Domain.Services;
+using $ext_safeprojectname$.Services;
+using $ext_safeprojectname$.Domain;
+using $ext_safeprojectname$.Data;
 using Microsoft.AspNet.Identity.EntityFramework;
-using BlankProject.Domain.Entities;
-using BlankProject.Controllers;
+using $ext_safeprojectname$.Domain.Entities;
+using $ext_safeprojectname$.Controllers;
 using Microsoft.AspNet.Identity;
-using BlankProject.Domain.Common;
-using BlankProject.Common;
+using $ext_safeprojectname$.Domain.Common;
+using $ext_safeprojectname$.Common;
 
-namespace BlankProject.App_Start
+namespace $ext_safeprojectname$.App_Start
 {
     /// <summary>
     /// Specifies the Unity configuration for the main container.

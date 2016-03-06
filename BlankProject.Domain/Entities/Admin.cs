@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlankProject.Domain.Entities
+namespace $ext_safeprojectname$.Domain.Entities
 {
     public class Admin : User
     {

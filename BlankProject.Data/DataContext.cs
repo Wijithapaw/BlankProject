@@ -3,13 +3,13 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using BlankProject.Domain.Entities;
-using BlankProject.Domain;
-using BlankProject.Domain.Common;
+using $ext_safeprojectname$.Domain.Entities;
+using $ext_safeprojectname$.Domain;
+using $ext_safeprojectname$.Domain.Common;
 using System;
 using System.Linq;
 
-namespace BlankProject.Data
+namespace $ext_safeprojectname$.Data
 {
    
     public class DataContext : IdentityDbContext<User>, IDataContext

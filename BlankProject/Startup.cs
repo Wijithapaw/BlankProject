@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(BlankProject.Startup))]
-namespace BlankProject
+[assembly: OwinStartupAttribute(typeof($ext_safeprojectname$.Startup))]
+namespace $ext_safeprojectname$
 {
     public partial class Startup
     {

@@ -1,6 +1,6 @@
-﻿using BlankProject.Domain.Entities;
-using BlankProject.Services;
-using BlankProject.Test.Mocks;
+﻿using $ext_safeprojectname$.Domain.Entities;
+using $ext_safeprojectname$.Services;
+using $ext_safeprojectname$.Test.Mocks;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace BlankProject.Test.Services
+namespace $ext_safeprojectname$.Test.Services
 {
     public class AdminServiceTests
     {

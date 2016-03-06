@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace BlankProject.Areas.AdminArea
+namespace $ext_safeprojectname$.Areas.AdminArea
 {
     public class AdminAreaAreaRegistration : AreaRegistration 
     {
