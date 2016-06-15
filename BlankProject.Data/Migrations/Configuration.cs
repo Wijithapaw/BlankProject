@@ -26,7 +26,18 @@ namespace BlankProject.Data.Migrations
             // this account with valid data once login
             if (!context.Users.Any())
             {
-                Admin admin = new Admin() { FirstName = "Super", LastName = "Admin", Email = "superadmin@yopmail.com", UserName = "superadmin@yopmail.com" };
+                Admin admin = new Admin()
+                {
+                    FirstName = "Super",
+                    LastName = "Admin",
+                    Email = "superadmin@yopmail.com",
+                    UserName = "superadmin@yopmail.com",
+                    CreatedBy = "System",
+                    CreatedDateUtc = DateTime.Now,
+                    LastUpdatedBy = "System",
+                    LastUpdatedDateUtc = DateTime.Now
+                    
+                };
                 var userManager = new UserManager<User>(new UserStore<User>(context));
                 var result = userManager.Create(admin, "admin123");
 
